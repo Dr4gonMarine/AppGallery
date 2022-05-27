@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Padding="15"
+             x:Class="AppGallery.XamarinForms.Estilos.EstiloHerdado.Herdado">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="BaseButtonStyle" TargetType="Button">
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
+            <Style x:Key="ButtonCancel" TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
+                <Setter Property="BackgroundColor" Value="#E74C3C"/>
+            </Style>
+            <Style x:Key="ButtonSave" TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
+                <Setter Property="BackgroundColor" Value="#27AE60"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="InheritStyle"/>
+
+            <StackLayout Orientation="Horizontal" >
+                <Button Text="Cancelar" Style="{StaticResource ButtonCancel}"/>
+                <Button Text="Salvar" Style="{StaticResource ButtonSave}"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

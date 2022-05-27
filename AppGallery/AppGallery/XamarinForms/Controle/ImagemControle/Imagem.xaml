@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ext="clr-namespace:AppGallery.XamarinForms.Controle.ImagemControle"
+             x:Class="AppGallery.XamarinForms.Controle.ImagemControle.Imagem">
+    <ContentPage.Content>
+        <StackLayout>
+            <!--Recurso-->
+            <Label Text="Source:Resource, Aspect"/>
+            <Image x:Name="Image01" Source="{ext:ImageResource AppGallery.XamarinForms.Controle.ImagemControle.background.png}" Aspect="AspectFill"/>
+
+            <!--Arquivo -> Imagens dentro dos projetos especificos do SO-->
+            <Label Text="Source:File"/>
+            <Image Source="xamarin.png"/>
+            
+            <!--URI-->
+            <Label Text="Source:Uri"/>
+            <Image Source="https://img2.gratispng.com/20180326/raw/kisspng-visual-studio-code-microsoft-visual-studio-microso-studio-5ab9ba1fa161f2.810855511522121247661.jpg"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

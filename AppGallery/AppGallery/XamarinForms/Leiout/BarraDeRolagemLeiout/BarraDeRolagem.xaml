@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGallery.XamarinForms.Leiout.BarraDeRolagemLeiout.BarraDeRolagem">
+    <ContentPage.Content>
+        
+        <Grid>
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            
+            <ScrollView Orientation="Both" Scrolled="ScrollView_Scrolled">
+                
+                <StackLayout>
+                    <BoxView Color="black" WidthRequest="500" HeightRequest="500"/>
+                    <Label x:Name="Posicao" Text="ScrollView 01" BackgroundColor="Black" TextColor="White"/>
+                
+                </StackLayout>
+            </ScrollView>
+            <ScrollView x:Name="BarraDeRolagemScroll" Grid.Row="1">
+                <StackLayout Margin="20">
+                    <ScrollView HorizontalScrollBarVisibility="Never" Orientation="Horizontal">
+                        <StackLayout Orientation="Horizontal" Margin="10">
+                            <BoxView Color="Black"/>
+                            <BoxView Color="Black"/>
+                            <BoxView Color="Black"/>
+                            <BoxView Color="Black"/>
+                            <BoxView Color="Black"/>
+                            <BoxView Color="Black"/>
+                            <BoxView Color="Black"/>
+                            <BoxView Color="Black"/>
+                        </StackLayout>
+                    </ScrollView>
+                    <Button Text="Clique-me" Clicked="RolarParaSegundaLabel"/>
+
+                    <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc iaculis quam metus. Etiam fringilla tortor at velit commodo, nec eleifend dui euismod. Nullam ultricies dignissim leo ac cursus. Suspendisse potenti. Aenean vehicula vehicula magna quis malesuada. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed rutrum tortor mauris, nec sodales eros euismod nec. Ut et lacinia mauris, laoreet elementum ex.
+                       Duis congue rhoncus nibh. Maecenas ac metus et quam feugiat facilisis ultricies sit amet enim. Proin eu elit sit amet neque venenatis sagittis. Integer aliquet, ligula nec cursus ultricies, magna dui rhoncus neque, quis condimentum justo ligula nec justo. Praesent aliquam condimentum leo sed vehicula. Sed dapibus tortor id purus mollis, nec hendrerit augue blandit. Donec facilisis nisi ut neque rutrum dapibus.
+Praesent scelerisque diam nec quam imperdiet pulvinar. Nam ullamcorper pharetra turpis, sed aliquet orci pharetra eget. Phasellus sit amet sem sed lectus malesuada cursus non quis purus. Donec iaculis ante orci, id consequat enim luctus hendrerit. Cras dignissim, tortor vel suscipit tristique, tortor nisi tincidunt nisi, a blandit augue mauris eget odio. Ut commodo sed ante vel rhoncus. Vestibulum id pharetra elit, a lacinia orci. Vestibulum semper accumsan velit, quis placerat nunc lobortis quis. Nunc sit amet pretium libero, ac aliquam ipsum. Donec aliquet nisi ut tellus tincidunt, et vulputate tellus mattis. Sed fermentum interdum elit a auctor.
+Fusce eget rutrum ipsum, id euismod arcu. Curabitur nec convallis dui, eu pulvinar nisl. Vestibulum blandit libero mi, quis luctus nibh tristique eu. Maecenas ut ornare eros, sit amet finibus ipsum. Vestibulum ligula mi, vulputate at nisl quis, dapibus sodales tellus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus id eleifend lectus." 
+                       BackgroundColor="Black" 
+                       Padding="20" 
+                       TextColor="White"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand" />
+
+                    <Label x:Name="SegundaLabel" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc iaculis quam metus. Etiam fringilla tortor at velit commodo, nec eleifend dui euismod. Nullam ultricies dignissim leo ac cursus. Suspendisse potenti. Aenean vehicula vehicula magna quis malesuada. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed rutrum tortor mauris, nec sodales eros euismod nec. Ut et lacinia mauris, laoreet elementum ex.
+                       Duis congue rhoncus nibh. Maecenas ac metus et quam feugiat facilisis ultricies sit amet enim. Proin eu elit sit amet neque venenatis sagittis. Integer aliquet, ligula nec cursus ultricies, magna dui rhoncus neque, quis condimentum justo ligula nec justo. Praesent aliquam condimentum leo sed vehicula. Sed dapibus tortor id purus mollis, nec hendrerit augue blandit. Donec facilisis nisi ut neque rutrum dapibus.
+Praesent scelerisque diam nec quam imperdiet pulvinar. Nam ullamcorper pharetra turpis, sed aliquet orci pharetra eget. Phasellus sit amet sem sed lectus malesuada cursus non quis purus. Donec iaculis ante orci, id consequat enim luctus hendrerit. Cras dignissim, tortor vel suscipit tristique, tortor nisi tincidunt nisi, a blandit augue mauris eget odio. Ut commodo sed ante vel rhoncus. Vestibulum id pharetra elit, a lacinia orci. Vestibulum semper accumsan velit, quis placerat nunc lobortis quis. Nunc sit amet pretium libero, ac aliquam ipsum. Donec aliquet nisi ut tellus tincidunt, et vulputate tellus mattis. Sed fermentum interdum elit a auctor.
+Fusce eget rutrum ipsum, id euismod arcu. Curabitur nec convallis dui, eu pulvinar nisl. Vestibulum blandit libero mi, quis luctus nibh tristique eu. Maecenas ut ornare eros, sit amet finibus ipsum. Vestibulum ligula mi, vulputate at nisl quis, dapibus sodales tellus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus id eleifend lectus." 
+                       BackgroundColor="Black" 
+                       Padding="20" 
+                       TextColor="White"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand" />
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

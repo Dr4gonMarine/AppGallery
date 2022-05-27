@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Padding="20"
+             x:Class="AppGallery.XamarinForms.Listas.TabelaControle.Tabela">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="TableView" />
+            <Label Text="Propriedade(s): "/>
+
+            <!--TextCell(descrição) , ImageCell(Colocar imagem), EntryCell, SwitchCell, ViewCell-->
+            <TableView HasUnevenRows="True">
+                <TableRoot>
+                    <TableSection Title="Gerência">
+                        <TextCell Tapped="TextCell_Tapped" Text="Geraldo Rodrigues Souza" TextColor="White" Detail="Gerente de TI"/>
+                        <TextCell Text="José Rodrigues Souza" TextColor="White" Detail="Gerente FInanceiro" DetailColor="Gold"/>
+                        <TextCell Text="Edson Rodrigues Souza" TextColor="White"/>
+                    </TableSection>
+                    
+                    <TableSection Title="Surpevisores">
+                        <ImageCell Text="Alison Rodrigues Souza" Detail="Supervisor de TI" ImageSource="foto.jpg"/>
+                    </TableSection>
+
+                    <TableSection Title="Formulário de Cadastro">
+                        <EntryCell Label="Nome" LabelColor="GreenYellow" Placeholder="Placeholder"/>
+                        <SwitchCell Text="É casado?" On="True" />
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Sexo" />
+                                <RadioButton Content="Masculino" HorizontalOptions="End"/>
+                                <RadioButton Content="Feminino"/>
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="End">
+                                <Button Text="Cancelar" BackgroundColor="Crimson"/>
+                                <Button Text="Salvar" BackgroundColor="Aquamarine"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

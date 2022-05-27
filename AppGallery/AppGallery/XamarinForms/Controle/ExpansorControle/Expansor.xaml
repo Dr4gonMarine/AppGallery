@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGallery.XamarinForms.Controle.ExpansorControle.Expansor">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Expansor" Padding="20"/>
+            <Frame BorderColor="Green" Margin="15">
+                <xct:Expander IsExpanded="True" ExpandAnimationEasing="{x:Static Easing.CubicInOut}" ExpandAnimationLength="5000" CollapseAnimationLength="5000">
+                    <xct:Expander.Header>
+                        <Label Text="Receita" TextColor="Green"/>
+                    </xct:Expander.Header>
+                    <xct:Expander.Content>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            
+                            <!--Linha-->
+                            <Label Text="03" Grid.Row="0" Grid.Column="0"/>
+                            <Label Text="Salário" Grid.Row="0" Grid.Column="1"/>
+                            <Label Text="R$ 3000" Grid.Row="0" Grid.Column="2"/>
+
+                            <Label Text="03" Grid.Row="1" Grid.Column="0"/>
+                            <Label Text="Bonus" Grid.Row="1" Grid.Column="1"/>
+                            <Label Text="R$ 200" Grid.Row="1" Grid.Column="2"/>
+                        </Grid>
+                    </xct:Expander.Content>
+                </xct:Expander>
+            </Frame>
+
+            <Frame BorderColor="Crimson" Margin="15">
+                <xct:Expander>
+                    <xct:Expander.Header>
+                        <Label Text="Despesas" TextColor="Crimson"/>
+                    </xct:Expander.Header>
+                    <xct:Expander.Content>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+
+                            <!--Linha-->
+                            <Label Text="04" Grid.Row="0" Grid.Column="0"/>
+                            <Label Text="Restaurante" Grid.Row="0" Grid.Column="1"/>
+                            <Label Text="R$ 50" Grid.Row="0" Grid.Column="2"/>
+
+                            <Label Text="05" Grid.Row="1" Grid.Column="0"/>
+                            <Label Text="Combustivel" Grid.Row="1" Grid.Column="1"/>
+                            <Label Text="R$ 200" Grid.Row="1" Grid.Column="2"/>
+
+                            <Label Text="06" Grid.Row="2" Grid.Column="0"/>
+                            <Label Text="Bonus" Grid.Row="2" Grid.Column="1"/>
+                            <Label Text="R$ 100" Grid.Row="2" Grid.Column="2"/>
+                        </Grid>
+                    </xct:Expander.Content>
+                </xct:Expander>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

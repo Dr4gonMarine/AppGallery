@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGallery.XamarinForms.Controle.CampoDeEntradaSimplesControle.CampoDeEntradaSimples">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Text, TextColor"/>
+                <Entry Text="Texto simples" TextColor="Blue"/>
+
+                <Label Text="Placeholder, PlaceHolderCOlor"/>
+                <Entry Placeholder="Texto simples" PlaceholderColor="LightCyan"/>
+
+                <Label Text="MaxLenght, BackgroundColor"/>
+                <Entry MaxLength="10" BackgroundColor="Cyan"/>
+
+                <Label Text="IsReadOnly, IsPassword"/>
+                <Entry Text="123456" IsReadOnly="True" IsPassword="True"/>
+
+                <Label Text="ClearButtonVisibility"/>
+                <Entry ClearButtonVisibility="WhileEditing"/>
+
+                <Label Text="CharacterSpacing"/>
+                <Entry Text="Exemplo" CharacterSpacing="5"/>
+
+                <Label Text="FontFamily, FontSize, FontAttributes"/>
+                <Entry FontFamily="sans-serif-thin" FontSize="32" FontAttributes="Italic"/>
+
+                <Label Text="CursorPosition, SelectionLenght"/>
+                <Entry Text="Elias Ribeiro" CursorPosition="5" SelectionLength="7"/>
+
+                <Label Text="IsSpellCheckEnabled, IsTextPredictionEnabled"/>
+                <Entry IsSpellCheckEnabled="True" IsTextPredictionEnabled="True"/>
+
+                <Label Text="Keyboard, ReturnType"/>
+                <Entry Keyboard="Numeric" ReturnType="Go"/>
+
+                <Label Text="KeyboardFlags"/>
+                <Entry>
+                    <Entry.Keyboard>
+                        <Keyboard x:FactoryMethod="Create">
+                            <x:Arguments>
+                                <KeyboardFlags>Suggestions,SpellCheck,CapitalizeCharacter</KeyboardFlags>
+                            </x:Arguments>
+                        </Keyboard>
+                    </Entry.Keyboard>
+                </Entry>
+
+                <Label Text="Eventos: Focused, Unfocused, TextChaged, Completed"/>
+                <Entry Focused="Entry_Focused" Unfocused="Entry_Unfocused" TextChanged="Entry_TextChanged" Completed="Entry_Completed"/>
+                <Label x:Name="Lblfocus" Text="-"/>
+                <Label x:Name="Lblunfocus" Text="-"/>
+                <Label x:Name="Lbltextchage" Text="-"/>
+                <Label x:Name="Lblcomplete" Text="-"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

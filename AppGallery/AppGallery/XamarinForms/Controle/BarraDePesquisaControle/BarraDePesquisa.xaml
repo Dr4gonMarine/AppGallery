@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Padding="15"
+             x:Class="AppGallery.XamarinForms.Controle.BarraDePesquisa.BarraDePesquisa">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Text, TextColor"/>
+            <SearchBar Text="Pesquisando . . ." TextColor="Gold"/>
+
+            <Label Text="Placeholder, PlaceholderColor"/>
+            <SearchBar Placeholder="TESTE" PlaceholderColor="Pink"/>
+
+            <Label Text="FontFamily, FontSize..."/>
+            <SearchBar FontFamily="sans-serif-light" FontSize="20"/>
+
+            <Label Text="CancelButtonColor"/>
+            <SearchBar CancelButtonColor="Blue"/>
+
+            <Label Text="Evento SearchButtonPressed"/>
+            <SearchBar SearchButtonPressed="SearchBar_SearchButtonPressed"/>
+            <Label x:Name="LblSearchButtonPressed" Text="-"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

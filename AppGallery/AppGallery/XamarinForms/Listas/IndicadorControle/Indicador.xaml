@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Padding="15"
+             x:Class="AppGallery.XamarinForms.Listas.IndicadorControle.Indicador">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="IndicatorView"/>
+            <Label Text="Propriedades: IndicatorColor, IndicatorsShape, IndicatorSize, SelectedIndicatorColor, MaximumVisible"/>
+            <Label Text="Eventos "/>
+            <CarouselView IndicatorView="IndicadorControle">
+                <CarouselView.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>FIAT - UNO</x:String>
+                        <x:String>FIAT - MOBI</x:String>
+                        <x:String>FIAT - Argo</x:String>
+                        <x:String>FORD - Ka</x:String>
+                        <x:String>FORD - Fusion</x:String>
+                        <x:String>FORD - EcoSport</x:String>
+                    </x:Array>
+                </CarouselView.ItemsSource>
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="10">
+                            <Frame BorderColor="Gray">
+                                <Label Text="{Binding .}"/>
+                            </Frame>
+                        </StackLayout>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+
+            <IndicatorView  x:Name="IndicadorControle" 
+                           IndicatorColor="Crimson"                          
+                           Margin="0,0,0,10"
+                            IndicatorsShape="Circle"
+                           IndicatorSize="10"
+                           SelectedIndicatorColor="AliceBlue"
+                           MaximumVisible="3"  HorizontalOptions="Center">
+                <IndicatorView.IndicatorTemplate>
+                    <DataTemplate>
+                        <Frame CornerRadius="30" IsClippedToBounds="True" WidthRequest="20">
+                            <Image Source="xamarin.png"/>
+                        </Frame>
+                    </DataTemplate>
+                </IndicatorView.IndicatorTemplate>
+            </IndicatorView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

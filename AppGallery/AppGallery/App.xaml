@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGallery.App">
+    <Application.Resources>
+        <ResourceDictionary>
+
+            <DataTemplate x:Key="PageListDataTemplate">
+                <StackLayout Padding="30,0,0,0">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="AbrirPagina" CommandParameter="{Binding .}"/>
+                    </StackLayout.GestureRecognizers>
+                    <Label Text="{Binding Nome}" FontAttributes="Bold" FontSize="20" TextDecorations="Underline"/>
+                    <Label Text="{Binding Descricao}" FontFamily="MontserratLight" Padding="0,0,0,20"/>
+                </StackLayout>
+            </DataTemplate>
+
+            <!--Cores tema Claro-->
+            <Color x:Key="LightFirstColor">White</Color>
+            <Color x:Key="LightSecondColor">Black</Color>
+            <Color x:Key="LightThirdColor">#EDEDED</Color>
+
+            <!--Cores Tema Escuro-->
+            <Color x:Key="DarkFirstColor">Black</Color>
+            <Color x:Key="DarkSecondColor">White</Color>
+            <Color x:Key="DarkThirdColor">#202020</Color>
+            
+            <!--Cores para frame e entry-->
+            <Color x:Key="SearchEntryLight">#FAFAFA</Color>
+            <Color x:Key="SearchEntryDark">#111111</Color>
+            
+            <!--LogoMarca-->
+            <Style TargetType="Image" x:Key="LogoMarca">
+                <Setter Property="Source"
+                        Value="{AppThemeBinding Light='logoclaro.png', Dark='logoescuro.png'}"/>
+            </Style>
+            <Style TargetType="StackLayout" x:Key="LogoBackground">
+                <Setter Property="BackgroundColor"
+                        Value="{AppThemeBinding Light='#d6d6d6', Dark='Black'}"/>
+            </Style>
+            <!--Creditos-->
+            <Style TargetType="Image" x:Key="IconHome">
+                <Setter Property="Source" 
+                        Value="{AppThemeBinding Light='homeclaro.png', Dark='homeescuro.png'}"/>
+            </Style>
+            <Style x:Key="IconHeart" TargetType="Image">
+                <Setter Property="Source" 
+                        Value="{AppThemeBinding Light='heartclaro.png', Dark='heartescuro.png'}"/>
+            </Style>
+            
+            <!--Pagina de Créditos-->
+            <Style x:Key="TituloCreditos" TargetType="Label">
+                <Setter Property="FontFamily" Value="MontserratBold"/>
+                <Setter Property="FontSize" Value="20"/>
+            </Style>
+            <Style x:Key="SubtitulosCreditos" TargetType="Label">
+                <Setter Property="FontFamily" Value="MontserratBold"/>
+                <Setter Property="FontSize" Value="18"/>
+            </Style>
+            <Style x:Key="Link" TargetType="Label">
+                <Setter Property="TextColor" Value="#006fff"/>
+                <Setter Property="TextDecorations" Value="Underline"/>
+            </Style>
+
+            <!--Paginas-->
+            <Style TargetType="Page" ApplyToDerivedTypes="True">
+                <Setter Property="BackgroundColor"
+                    Value="{AppThemeBinding Light={StaticResource LightFirstColor}, Dark={StaticResource DarkThirdColor}}" />
+            </Style>
+            <Style x:Name="PageMenu" TargetType="ContentPage">
+                <Setter Property="BackgroundColor"
+                    Value="{AppThemeBinding Light={StaticResource LightThirdColor}, Dark={StaticResource DarkThirdColor}}" />
+            </Style>
+
+            <!--Botões-->
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor"
+                    Value="{AppThemeBinding Light={StaticResource LightThirdColor}, Dark={StaticResource DarkFirstColor}}" />
+                <Setter Property="TextColor"
+                    Value="{AppThemeBinding Light={StaticResource LightSecondColor}, Dark={StaticResource DarkSecondColor}}" />
+                <Setter Property="FontFamily"
+                        Value="Montserrat"/>
+            </Style>
+            
+            <!--Label-->
+            <Style TargetType="Label">
+                <Setter Property="TextColor"
+                    Value="{AppThemeBinding Light={StaticResource LightSecondColor}, Dark={StaticResource DarkSecondColor}}" />
+                <Setter Property="FontFamily"
+                        Value="Montserrat"/>
+            </Style>
+            
+            <!--Navigation-->
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor"
+                    Value="{AppThemeBinding Light={StaticResource LightThirdColor}, Dark={StaticResource DarkFirstColor}}" />
+                <Setter Property="BarTextColor"
+                    Value="{AppThemeBinding Light={StaticResource LightSecondColor}, Dark={StaticResource DarkSecondColor}}" />
+            </Style>
+
+            <!--Estilos para página início-->
+            <Style x:Key="SearchEntry" TargetType="Entry">
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource SearchEntryLight}, Dark={StaticResource SearchEntryDark}}"/>
+                <Setter Property="PlaceholderColor" Value="#646464"/>
+            </Style>
+            <Style x:Key="SearchButton" TargetType="Button">
+                <Setter Property="FontFamily" Value="MontserraBold"/>
+                <Setter Property="BorderColor" Value="#707070"/>
+                <Setter Property="BorderWidth" Value="1"/>
+            </Style>
+            
+            <!--Frames-->
+            <Style x:Key="FramesEstilosos" TargetType="Frame">
+                <Setter Property="BorderColor" Value="#707070"/>
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={DynamicResource SearchEntryLight}, Dark={DynamicResource SearchEntryDark}}"/>
+            </Style>
+                       
+            
+            <!--<Style x:Key="EstiloGlobalBotao" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="Black"/>
+                <Setter Property="TextColor" Value="White"/>
+            </Style>-->
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

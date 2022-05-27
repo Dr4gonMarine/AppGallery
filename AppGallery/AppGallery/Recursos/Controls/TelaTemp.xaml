@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:control="clr-namespace:AppGallery.Recursos.Controls"
+             x:Class="AppGallery.Recursos.Controls.TelaTemp">
+    <ContentPage.Content>
+        <StackLayout>
+            <control:TitleComponenteView 
+                Name="ListView"
+                Properties="ItemsOurce, ItemTemplate" 
+                Events="ItemTapped" 
+                Methods="Play,Stop" 
+                Observation="Habilitar experimental"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGallery.XamarinForms.Listas.CarrosselControle.Carrossel">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="CarouselView"/>
+            <Label Text="Propriedades: ItemSSource, ItemTemplate, EmptyView, PeekAreaInsets, RemainingItemsThreshold, Position"/>
+            <Label Text="Eventos: RemainingItemsThresholdReached"/>
+
+            <Label x:Name="LblPosition"/>
+            <Label x:Name="LblItem"/>
+
+            <CarouselView x:Name="Carrossel01" EmptyView="Nenhum Registro!" Position="1" PeekAreaInsets="50" RemainingItemsThreshold= "2" RemainingItemsThresholdReached="Carrossel01_RemainingItemsThresholdReached" CurrentItemChanged="Carrossel01_CurrentItemChanged" PositionChanged="Carrossel01_PositionChanged">
+                <!--<CarouselView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical"/>
+                </CarouselView.ItemsLayout>-->
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="10">
+                            <Frame BorderColor="Gray" Margin="10">
+                                <StackLayout>
+                                    <Label Text="{Binding Nome}" FontSize="20" FontAttributes="Bold"/>
+                                    <Label Text="{Binding Cargo}" FontAttributes="Italic"/>
+                                    <Label Text="{Binding Descricao}" FontSize="8" />
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

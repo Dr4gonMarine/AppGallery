@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGallery.XamarinForms.Leiout.AbsolutoLeiout.Absoluto">
+    <ContentPage.Content>
+        <AbsoluteLayout BackgroundColor="AliceBlue" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <!--Desenho margem esquerda superiror-->
+            <BoxView BackgroundColor="Gray" AbsoluteLayout.LayoutBounds="0, 0, 100,30" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+            <BoxView BackgroundColor="Gray" AbsoluteLayout.LayoutBounds="0, 0, 30,100" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+            <!--Desenho Margem direita superiror-->
+            <BoxView BackgroundColor="Gray" AbsoluteLayout.LayoutBounds="1, 0, 100,30" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+            <BoxView BackgroundColor="Gray" AbsoluteLayout.LayoutBounds="1, 0, 30,100" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+            <!--Desenho margem esquerda inferior-->
+            <BoxView BackgroundColor="Gray" AbsoluteLayout.LayoutBounds="0, 1, 100,30" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+            <BoxView BackgroundColor="Gray" AbsoluteLayout.LayoutBounds="0, 1, 30,100" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+            <!--Desenho Margem direita inferior-->
+            <BoxView BackgroundColor="Gray" AbsoluteLayout.LayoutBounds="1, 1, 100,30" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+            <BoxView BackgroundColor="Gray" AbsoluteLayout.LayoutBounds="1, 1, 30,100" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
+            <BoxView BackgroundColor="Gray" AbsoluteLayout.LayoutBounds="0.5,0.5,0.5,0.5" AbsoluteLayout.LayoutFlags="All"/>
+
+            <Label TextColor="White" Text="AbsoluteLayout" AbsoluteLayout.LayoutBounds=".5, .5, .2, .2" AbsoluteLayout.LayoutFlags="All" HorizontalTextAlignment="Center"/>
+
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Padding="20"
+             x:Class="AppGallery.XamarinForms.Controle.MediaControle.Midia">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="MediaElement"/>
+            <Label Text="Propriedades: "/>
+            <Label Text="Métodos: "/>
+            <Label Text="Enventos: "/>
+            
+            
+            <Label Text="MP3" FontAttributes="Bold" HorizontalOptions="Center"/>
+            <Label Text="Media Elemente é experimental e não funciona" FontSize="30" FontAttributes="Bold"/>
+            <Label Text="MP4" FontAttributes="Bold" HorizontalOptions="Center"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGallery.XamarinForms.Estilos.EstiloExplicito.Explicito">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="EstiloParaBotao" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="Pink"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="Margin" Value="10"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="ExplicitStyle"/>
+            <Label Text="Vantagem: Padronização, Reutilização do Código e Manutenção"/>
+
+            <Button Text="Botão 01" Style="{StaticResource EstiloParaBotao}"/>
+            <Button Text="Botão 02" Style="{StaticResource EstiloParaBotao}"/>
+            <Button Text="Botão 03" Style="{StaticResource EstiloParaBotao}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

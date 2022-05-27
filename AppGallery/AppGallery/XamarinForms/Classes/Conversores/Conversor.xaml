@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converter="clr-namespace:AppGallery.XamarinForms.Classes.Conversores"
+             Padding="15"
+             x:Class="AppGallery.XamarinForms.Classes.Conversores.Conversor">
+    <ContentPage.Resources>
+        <converter:OpcionalConverter x:Key="OptionalConverter"/>
+        <converter:ValorConverter x:Key="ValorConverter"/>
+        <converter:ZebraConverter x:Key="ZebraConverter"/>
+    </ContentPage.Resources>
+    
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Converter"/>
+
+            <ListView x:Name="Lista01" HasUnevenRows="True" IsEnabled="False">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame BorderColor="Aquamarine" CornerRadius="10" BackgroundColor="{Binding .,Converter={StaticResource ZebraConverter}}">
+                                <StackLayout>
+                                    <Label Text="{Binding Marca}"/>
+                                    <Label Text="{Binding Modelo}"/>
+                                    <Label Text="{Binding Opcionais, Converter={StaticResource OptionalConverter}}"/>
+                                    <Label Text="{Binding Valor, Converter={StaticResource ValorConverter}}"/>
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

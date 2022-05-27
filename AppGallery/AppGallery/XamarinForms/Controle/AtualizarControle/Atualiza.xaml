@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             
+             xmlns:control="clr-namespace:AppGallery.Recursos.Controls"
+             x:Class="AppGallery.XamarinForms.Controle.AtualizarControle.Atualiza">
+    <ContentPage.Content>
+        <RefreshView RefreshColor="Green" Refreshing="RefreshView_Refreshing">
+            <ScrollView>
+                <StackLayout>
+                    <control:TitleComponenteView
+                        Name="RefreshView"
+                        Properties="IsRefresing, RefreshColor"
+                        Events="Refreshing"
+                        Observation="Requisito: Precisa de Barra de Rolagem - ScrollView,ListView, CollectionView,CarouselView"
+                        />
+                    <!--<Label Text="RefreshView"/>
+                    <Label Text="Propriedades: IsRefreshing, RefreshColor"/>
+                    <Label Text="Eventos: Refreshing"/>
+                    <Label Text="Observação: Barra de Rolagem - ScrollView, ListView, CollectionView, CarouselView. É necessario para seu funcionamento"/>-->
+                    <Label x:Name="LblStatus"  Text="Não atualizado!" TextColor="Red" FontSize="26" HorizontalOptions="Center" VerticalOptions="Center"/>
+                </StackLayout>
+            </ScrollView>
+        </RefreshView>
+    </ContentPage.Content>
+</ContentPage>

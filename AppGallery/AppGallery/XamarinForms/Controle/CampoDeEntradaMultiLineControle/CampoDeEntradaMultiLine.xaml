@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGallery.XamarinForms.Controle.CampoDeEntradaMultiLineControle.CampoDeEntradaMultiLine">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Text, TextColor"/>
+                <Editor Text="Texto simples" TextColor="Blue"/>
+
+                <Label Text="Placeholder, PlaceHolderCOlor"/>
+                <Editor Placeholder="Texto simples" PlaceholderColor="LightCyan"/>
+
+                <Label Text="MaxLenght, BackgroundColor"/>
+                <Editor MaxLength="10" BackgroundColor="Cyan"/>
+
+                <Label Text="IsReadOnly"/>
+                <Editor Text="123456" IsReadOnly="True"/>
+
+                <Label Text="CharacterSpacing"/>
+                <Editor Text="Exemplo" CharacterSpacing="5"/>
+
+                <Label Text="FontFamily, FontSize, FontAttributes"/>
+                <Editor FontFamily="sans-serif-thin" FontSize="32" FontAttributes="Italic"/>
+
+                <Label Text="CursorPosition, SelectionLenght"/>
+                <Editor Text="Elias Ribeiro"/>
+
+                <Label Text="IsSpellCheckEnabled, IsTextPredictionEnabled"/>
+                <Editor IsSpellCheckEnabled="True" IsTextPredictionEnabled="True"/>
+
+                <Label Text="Keyboard"/>
+                <Editor Keyboard="Numeric"/>
+
+                <Label Text="KeyboardFlags"/>
+                <Editor>
+                    <Editor.Keyboard>
+                        <Keyboard x:FactoryMethod="Create">
+                            <x:Arguments>
+                                <KeyboardFlags>Suggestions,SpellCheck,CapitalizeCharacter</KeyboardFlags>
+                            </x:Arguments>
+                        </Keyboard>
+                    </Editor.Keyboard>
+                </Editor>
+
+                <Label Text="Eventos: Focused, Unfocused, TextChaged, Completed"/>
+                <Editor HeightRequest="200" Focused="Entry_Focused" Unfocused="Entry_Unfocused" TextChanged="Entry_TextChanged" Completed="Entry_Completed"/>
+                <Label x:Name="Lblfocus" Text="-"/>
+                <Label x:Name="Lblunfocus" Text="-"/>
+                <Label x:Name="Lbltextchage" Text="-"/>
+                <Label x:Name="Lblcomplete" Text="-"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

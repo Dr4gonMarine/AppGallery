@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Name="myComponent"
+             BindingContext="{x:Reference myComponent}"
+             x:Class="AppGallery.Recursos.Controls.TitleComponenteView">
+    <ContentView.Content>
+        <Frame Margin="10" BackgroundColor="{AppThemeBinding Light={DynamicResource SearchEntryLight}, Dark={DynamicResource SearchEntryDark}}">
+            <StackLayout>
+                <Label x:Name="LblName" Text="{Binding Name}" Style="{DynamicResource TituloCreditos}"/>
+
+                <Label x:Name="LblProperties" Text="Propriedade(s)"  Style="{DynamicResource SubtitulosCreditos}"/>
+                <Label Text="{Binding Properties}" x:Name="LblPropertiesValue"/>
+
+                <Label x:Name="LblEvents" Text="Evento(s)" Style="{DynamicResource SubtitulosCreditos}"/>
+                <Label Text="{Binding Events}" x:Name="LblEventsValue"/>
+
+                <Label x:Name="LblMethods" Text="Método(s)" Style="{DynamicResource SubtitulosCreditos}"/>
+                <Label Text="{Binding Methods}" x:Name="LblMethodsValue"/>
+
+                <Label x:Name="LblObservation" Text="Observação" Style="{DynamicResource SubtitulosCreditos}"/>
+                <Label Text="{Binding Observation}" x:Name="LblObservationValue"/>
+            </StackLayout>
+        </Frame>
+    </ContentView.Content>
+</ContentView>
