@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:AppGallery.Recursos.Controls"
+             Title="Formas (Shapes)"
+             x:Class="AppGallery.XamarinForms.XF47.Formas">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <controls:TitleComponenteView Name="Shape" Properties="Aspect, Stroke, Fill, StrokeThickness, StrokeDashArray, StrokeLineCap, StrokeLineJoin"/>
+                <Grid ColumnDefinitions="*,*" RowDefinitions="Auto">
+                    <Ellipse
+                        Aspect="UniformToFill"
+                        StrokeThickness="10"
+                        StrokeDashArray="2,0.5"
+                        StrokeLineCap="Round"
+                        HeightRequest="50"                
+                        Stroke="Blue"
+                        Fill="#CCC"
+                    />
+                    <Rectangle 
+                        HorizontalOptions="Center"
+                        WidthRequest="75"
+                        HeightRequest="50"
+                        Stroke="Blue"
+                        StrokeThickness="8"
+                        StrokeLineJoin="Bevel"
+                        Fill="#CCC"
+                        Grid.Column="1"
+                    />
+                </Grid>
+                
+                <controls:TitleComponenteView Name="Rectangle"/>
+                <Rectangle 
+                HorizontalOptions="Center"
+                WidthRequest="75"
+                HeightRequest="50"
+                Stroke="Blue"
+                Fill="#CCC"
+                />
+                <controls:TitleComponenteView Name="Ellipse"/>
+                <Ellipse
+                HorizontalOptions="Center"
+                WidthRequest="50"
+                HeightRequest="50"                
+                Stroke="Blue"
+                Fill="#CCC"
+                />
+                <controls:TitleComponenteView Name="Line"/>
+                <Line
+                HorizontalOptions="Center"
+                X1="0"
+                Y1="50"
+                
+                X2="50"
+                Y2="0"
+                
+                Stroke="Blue"                
+                />
+                <controls:TitleComponenteView Name="PolyLine"/>
+                <Polyline
+                HorizontalOptions="Center"
+                Margin="10"
+                Points="0,50 30,50 40,20 50,30 60,00 70,50 90,50"
+                Stroke="Blue"          
+                StrokeThickness="5"
+                />
+                <controls:TitleComponenteView Name="Polygon"/>
+                <Polygon
+                    Margin="20"
+                    HorizontalOptions="Center"
+                    Points="0,0 0,50 50,25"
+                    Stroke="Blue"
+                    StrokeThickness="3"
+                    Fill="#CCC"
+                    />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

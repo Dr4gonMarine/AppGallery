@@ -173,6 +173,22 @@ namespace AppGallery
                 };
                 classesuteis.Nome = "Classes úteis";
 
+                var xf47 = new PaginaColecao()
+                {
+                    new Pagina() { Nome = "Grid Rápida", Descricao = "Nova Forma de declarar colunas e linhas", ArquivoPagina = typeof(XamarinForms.XF47.GridRapida), IsNavegacao = true },
+                    new Pagina() { Nome = "Multi-Bindings", Descricao = "Texto com vinculos multiplos", ArquivoPagina = typeof(XamarinForms.XF47.MultiplosVinculos), IsNavegacao = true },
+                    new Pagina() { Nome = "Formas (Shapes)", Descricao = "Construa formas retângulares, elipse e linhas", ArquivoPagina = typeof(XamarinForms.XF47.Formas), IsNavegacao = true },
+                    new Pagina() { Nome = "Paths", Descricao = "Desenhe Livremente", ArquivoPagina = typeof(XamarinForms.XF47.Caminhos), IsNavegacao = true },
+                    
+                };
+                xf47.Nome = "Xamarin Forms 4.7";
+
+                var shell = new PaginaColecao()
+                {
+                    new Pagina() { Nome = "Tabbar (Shell)", Descricao = "Uma nova forma de navegação baseada em abas com Shell", ArquivoPagina = typeof(XamarinForms.Concha.Abas.AppShellTabbar), SubstituirMainPage = true },                    
+                };
+                shell.Nome = "Shell";
+
                 return new List<PaginaColecao>()
                 {
                     Pagina,
@@ -182,7 +198,9 @@ namespace AppGallery
                     estilos,
                     animacao,
                     gestos,
-                    classesuteis
+                    classesuteis,
+                    xf47,
+                    shell
                 };
             }
         }
@@ -196,19 +214,28 @@ namespace AppGallery
 
                 //Verificar se tem ou não navegação
                 Page pagina = null;
-                if (parametro.IsNavegacao)
+
+                if(parametro.SubstituirMainPage)
                 {
-
-                    new NavigationPage((Page)Activator.CreateInstance(parametro.ArquivoPagina));
-
+                    pagina = (Page)Activator.CreateInstance(parametro.ArquivoPagina);
+                    App.Current.MainPage = pagina;
                 }
                 else
                 {
-                    pagina = (Page)Activator.CreateInstance(parametro.ArquivoPagina);
-                }
+                    if (parametro.IsNavegacao)
+                    {
 
+                        pagina = new NavigationPage((Page)Activator.CreateInstance(parametro.ArquivoPagina));
+
+                    }
+                    else
+                    {
+                        pagina = (Page)Activator.CreateInstance(parametro.ArquivoPagina);
+                    }
+
+                }
                 //Abrir a tela e fechar o menu
-               // var x = this.GetType();
+                // var x = this.GetType();
                 //var y = this;
                 //var z = App.Current.MainPage;
                 ((MasterDetailPage)App.Current.MainPage).Detail = pagina;
@@ -217,7 +244,6 @@ namespace AppGallery
             catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
-
             }
         }
 

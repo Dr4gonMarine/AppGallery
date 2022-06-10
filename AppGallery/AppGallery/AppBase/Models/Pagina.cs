@@ -11,5 +11,6 @@ namespace AppGallery.AppBase.Models
         public string Descricao { get; set; }
         public Type ArquivoPagina { get; set; }
         public bool IsNavegacao { get; set; }
+        public bool SubstituirMainPage { get; set; }
     }
 }
