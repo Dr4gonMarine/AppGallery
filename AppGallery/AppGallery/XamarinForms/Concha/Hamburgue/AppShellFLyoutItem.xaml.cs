@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace AppGallery.XamarinForms.Concha.Abas.Paginas
+namespace AppGallery.XamarinForms.Concha.Hamburgue
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Cachorro : ContentPage
+    public partial class AppShellFLyoutItem : Shell
     {
-        public Cachorro()
+        public AppShellFLyoutItem()
         {
             InitializeComponent();
         }

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell 
+    FlyoutIcon="menu"
+    FlyoutBackgroundImage="background"
+    FlyoutBackgroundImageAspect="Fill"  
+    FlyoutBackdrop="red"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"       
+    xmlns:paginas="clr-namespace:AppGallery.XamarinForms.Concha.Hamburgue.Paginas"
+             x:Class="AppGallery.XamarinForms.Concha.Hamburgue.AppShellFLyoutItem">
+
+    <!--<Shell.FlyoutBackground>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#83a4d4" Offset="0.1"/>
+            <GradientStop Color="#b6fbff" Offset="1"/>
+        </LinearGradientBrush>
+    </Shell.FlyoutBackground>-->
+
+    <Shell.FlyoutHeader>
+        <ContentView>
+            <Image  Source="https://itpetblog.com.br/wp-content/uploads/2019/07/grumpy-cat.jpg"/>
+        </ContentView>
+    </Shell.FlyoutHeader>
+    <FlyoutItem Title="Domésticos" Icon="feliz">
+        <Tab>
+            <ShellContent Title="Cachorro" Icon="dog" ContentTemplate="{DataTemplate paginas:Cachorro}"/>
+            <ShellContent Title="Gato" Icon="feliz" ContentTemplate="{DataTemplate paginas:Gato}"/>
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="Todos os animais" FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent Title="Cachorro" Icon="dog" ContentTemplate="{DataTemplate paginas:Cachorro}"/>
+        <ShellContent Title="Gato" Icon="feliz" ContentTemplate="{DataTemplate paginas:Gato}"/>
+        <ShellContent Title="Peixe" Icon="peixe" ContentTemplate="{DataTemplate paginas:Peixe}"/>
+        <ShellContent Title="Tartaruga" Icon="turtle" ContentTemplate="{DataTemplate paginas:Tartaruga} "/>
+    </FlyoutItem>
+    <ShellContent Title="Tartaruga" Icon="turtle" ContentTemplate="{DataTemplate paginas:Tartaruga} "/>
+
+    <MenuItem Text="Sair" IconImageSource="logout" Clicked="AbrirAppGallery"/>
+
+</Shell>

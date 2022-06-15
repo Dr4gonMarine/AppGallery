@@ -186,6 +186,7 @@ namespace AppGallery
                 var shell = new PaginaColecao()
                 {
                     new Pagina() { Nome = "Tabbar (Shell)", Descricao = "Uma nova forma de navegação baseada em abas com Shell", ArquivoPagina = typeof(XamarinForms.Concha.Abas.AppShellTabbar), SubstituirMainPage = true },                    
+                    new Pagina() {  Nome = "Flyout (Shell)", Descricao = "Uma nova forma de navegação baseada em abas com Shell", ArquivoPagina = typeof(XamarinForms.Concha.Hamburgue.AppShellFLyoutItem), SubstituirMainPage = true },                                                        
                 };
                 shell.Nome = "Shell";
 

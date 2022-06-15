@@ -7,19 +7,14 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace AppGallery.XamarinForms.Concha.Abas.Paginas
+namespace AppGallery.XamarinForms.Concha.Hamburgue.Paginas
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Cachorro : ContentPage
+    public partial class Peixe : ContentPage
     {
-        public Cachorro()
+        public Peixe()
         {
             InitializeComponent();
-        }
-
-        private void AbrirAppGallery(object sender, EventArgs e)
-        {
-            App.Current.MainPage = new AppBase.Menu();
         }
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace AppGallery.XamarinForms.Concha.Abas.Paginas
+namespace AppGallery.XamarinForms.Concha.Hamburgue.Paginas
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Cachorro : ContentPage
@@ -15,11 +15,6 @@ namespace AppGallery.XamarinForms.Concha.Abas.Paginas
         public Cachorro()
         {
             InitializeComponent();
-        }
-
-        private void AbrirAppGallery(object sender, EventArgs e)
-        {
-            App.Current.MainPage = new AppBase.Menu();
         }
     }
 }

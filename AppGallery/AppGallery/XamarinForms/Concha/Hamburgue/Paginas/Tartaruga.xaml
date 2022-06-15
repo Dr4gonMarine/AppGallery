@@ -1,14 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             Title="Tartaruga"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             Title="Gato"
-             x:Class="AppGallery.XamarinForms.Concha.Abas.Paginas.Gato">
+             x:Class="AppGallery.XamarinForms.Concha.Hamburgue.Paginas.Tartaruga">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Gato!"
-                   VerticalOptions="CenterAndExpand"
-                   HorizontalOptions="Center"
-                   />
+            <Label Text="Tartaruga"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
