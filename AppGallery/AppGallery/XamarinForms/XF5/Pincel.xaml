@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"             
+             Title="Pincel"
+             x:Class="AppGallery.XamarinForms.XF5.Pincel">
+    <ContentPage.Content>
+        <StackLayout Padding="15">
+            <Label Text="LinearGradientBrush"/>
+            <BoxView HeightRequest="150">
+                <BoxView.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                        <GradientStop Offset="0.1" Color="Aqua"/>
+                        <GradientStop Offset="0.5" Color="Red"/>
+                        <GradientStop Offset="1" Color="DarkBlue"/>
+                    </LinearGradientBrush>
+                </BoxView.Background>
+            </BoxView>
+            
+            <BoxView Color="Transparent" HeightRequest="60"/>
+            
+            <Label Text="RadialGradientBrush"/>
+            <BoxView HeightRequest="150">
+                <BoxView.Background>
+                    <RadialGradientBrush Radius="0.6">
+                        <GradientStop Offset="0.1" Color="Aqua"/>
+                        <GradientStop Offset="0.6" Color="Red"/>
+                        <GradientStop Offset="1" Color="DarkBlue"/>
+                    </RadialGradientBrush>
+                </BoxView.Background>
+            </BoxView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

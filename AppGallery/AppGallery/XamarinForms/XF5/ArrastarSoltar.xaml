@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Drag and Drop"
+             x:Class="AppGallery.XamarinForms.XF5.ArrastarSoltar">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Frame">
+                <Setter Property="HeightRequest" Value="50"/>
+                <Setter Property="BorderColor" Value="Gray"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <ScrollView>
+
+            <StackLayout Padding="10">
+                <Label Text="Arraste e solte no quadrado o seu animal favorito"/>
+                <Grid ColumnDefinitions="*,*,*">
+                    <Frame>
+                        <Image Source="Cachorro.png">
+                            <Image.GestureRecognizers>
+                                <DragGestureRecognizer CanDrag="True"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </Frame>
+                    <Frame Grid.Column="1">
+                        <Image Source="feliz.png" >
+                            <Image.GestureRecognizers>
+                                <DragGestureRecognizer CanDrag="True"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </Frame>
+                    <Frame  Grid.Column="2">
+                        <Image Source="turtle.png" >
+                            <Image.GestureRecognizers>
+                                <DragGestureRecognizer CanDrag="True"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </Frame>
+                </Grid>
+                <Label Text="Solte o elemento aqui:"/>
+                <Frame WidthRequest="90" BackgroundColor="LightGray" BorderColor="Goldenrod" HorizontalOptions="Center">
+                    <Image>
+                        <Image.GestureRecognizers>
+                            <DropGestureRecognizer AllowDrop="True"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Frame>
+                <BoxView Color="Transparent" HeightRequest="30"/>
+                <Frame>
+                    <Label Text="Texto 1">
+                        <Label.GestureRecognizers>
+                            <DragGestureRecognizer CanDrag="True"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Frame>
+                <Frame>
+                    <Label Text="Texto 2">
+                        <Label.GestureRecognizers>
+                            <DragGestureRecognizer CanDrag="True"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Frame>
+                <Frame>
+                    <Label Text="Texto 3">
+                        <Label.GestureRecognizers>
+                            <DragGestureRecognizer CanDrag="True"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Frame>
+                <Frame WidthRequest="90" BackgroundColor="LightGray" BorderColor="Goldenrod" HorizontalOptions="Center">
+                    <Label>
+                        <Label.GestureRecognizers>
+                            <DropGestureRecognizer AllowDrop="True"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Frame>
+                
+                <BoxView Color="Transparent" HeightRequest="30"/>
+                <Grid ColumnDefinitions="*,*">
+                    <Frame>
+                        <Image Source="Cachorro.png">
+                            <Image.GestureRecognizers>
+                                <DragGestureRecognizer DragStarting="DragGestureRecognizer_DragStarting" CanDrag="True"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </Frame>
+                    <Frame Grid.Column="1">
+                        <Image Source="feliz.png" >
+                            <Image.GestureRecognizers>
+                                <DragGestureRecognizer DragStarting="DragGestureRecognizer_DragStarting_1" CanDrag="True"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </Frame>
+                </Grid>
+                <Label Text="Solte o elemento aqui:"/>
+                <Frame WidthRequest="90" BackgroundColor="LightGray" BorderColor="Goldenrod" HorizontalOptions="Center">
+                    <Frame.GestureRecognizers>
+                        <DropGestureRecognizer Drop="DropGestureRecognizer_Drop" AllowDrop="True"/>
+                    </Frame.GestureRecognizers>
+                    <Label x:Name="Carrinho"/>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

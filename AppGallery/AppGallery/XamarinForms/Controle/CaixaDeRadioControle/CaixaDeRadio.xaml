@@ -2,8 +2,53 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppGallery.XamarinForms.Controle.CaixaDeRadioControle.CaixaDeRadio">
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <ControlTemplate x:Key="RadioButtonTemplate">
+                <Frame CornerRadius="15" BorderColor="Gray" HasShadow="False">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroupList>
+                            <VisualStateGroup x:Name="CheckedStates">
+                                <VisualState x:Name="Checked">
+                                    <VisualState.Setters>
+                                        <Setter Property="Background" Value="#FF7A53"/>
+                                        <Setter Property="BorderColor" Value="#FF3A00"/>
+                                    </VisualState.Setters>
+                                </VisualState>
+                                <VisualState x:Name="Unchecked">
+                                    <VisualState.Setters>
+                                        <Setter Property="Background" Value="White"/>
+                                        <Setter Property="BorderColor" Value="Black"/>
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateGroupList>
+                    </VisualStateManager.VisualStateGroups>
+                    <ContentPresenter/>
+                </Frame>
+            </ControlTemplate>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Padding="25">
+
+            <RadioButton IsChecked="True" TextColor="Aqua" ControlTemplate="{StaticResource RadioButtonTemplate}">
+                <RadioButton.Content>
+                    <StackLayout>
+                        <Label Text="Isso é uma label"/>
+                        <Label Text="Outra Label" FontSize="10"/>
+                    </StackLayout>
+                </RadioButton.Content>
+            </RadioButton>
+            <RadioButton ControlTemplate="{StaticResource RadioButtonTemplate}">
+                <RadioButton.Content>
+                    <Image Source="feliz.png" HeightRequest="60" Aspect="AspectFit"/>
+                </RadioButton.Content>
+            </RadioButton>
+            <RadioButton Content="R$200" ControlTemplate="{StaticResource RadioButtonTemplate}"/>
+
             <Label Text="IsChecked"/>
             <RadioButton IsChecked="True" BackgroundColor="Gold" Content="Teste 01" TextColor="Aqua"/>
             <RadioButton IsChecked="False" BackgroundColor="Gray" Content="Teste 02" TextColor="White"/>

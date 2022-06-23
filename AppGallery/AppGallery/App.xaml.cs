@@ -190,6 +190,13 @@ namespace AppGallery
                 };
                 shell.Nome = "Shell";
 
+                var XF5 = new PaginaColecao()
+                {
+                    new Pagina() { Nome = "Pincel", Descricao = "Uma forma nativa de fazer gradientes", ArquivoPagina = typeof(XamarinForms.XF5.Pincel), IsNavegacao = true },                    
+                    new Pagina() { Nome = "Drag and Drop", Descricao = "Novo gesto de arrastar e soltar controles", ArquivoPagina = typeof(XamarinForms.XF5.ArrastarSoltar), IsNavegacao = true },                    
+                };
+                shell.Nome = "XF5";
+
                 return new List<PaginaColecao>()
                 {
                     Pagina,
@@ -201,7 +208,8 @@ namespace AppGallery
                     gestos,
                     classesuteis,
                     xf47,
-                    shell
+                    shell,
+                    XF5
                 };
             }
         }
